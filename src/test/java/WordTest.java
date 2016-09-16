@@ -6,6 +6,7 @@ public class WordTest {
   @After
   public void tearDown() {
     Word.clear();
+    Definition.clear();
   }
 
   @Test
@@ -45,5 +46,19 @@ public class WordTest {
     Word wordOne = new Word("Java");
     Word wordTwo = new Word("HTML");
     assertEquals(wordTwo, Word.find(wordTwo.getId()));
+  }
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyList_ArrayList() {
+    Word testWord = new Word("HTML");
+    assertEquals(0, testWord.getDefinitions().size());
+  }
+
+  @Test
+  public void addDefinitions_addsDefinitionToWord_true() {
+    Word testWord = new Word("HTML");
+    Definition testDefinition = new Definition("HTML is a standardized system for tagging text files to achieve font, color, graphic.");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 }
