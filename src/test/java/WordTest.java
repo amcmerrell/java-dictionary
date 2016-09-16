@@ -27,4 +27,17 @@ public class WordTest {
     Word testWord = new Word("Java");
     Word.clear();
   }
+
+  @Test
+  public void getId_wordInstantiatesWithAnId_1() {
+    Word testWord = new Word("Java");
+    assertEquals(1, testWord.getId());
+  }
+
+  @Test
+  public void find_returnsWordWithSameId_wordTwo() {
+    Word wordOne = new Word("Java");
+    Word wordTwo = new Word("HTML");
+    assertEquals(wordTwo, Word.find(wordTwo.getId()));
+  }
 }
