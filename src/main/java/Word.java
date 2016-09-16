@@ -2,18 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Word {
-  private String mName;
+  private String mTerm;
   private static List<Word> instances = new ArrayList<Word>();
   private int mId;
 
-  public Word (String name) {
-    mName = name;
+  public Word (String term) {
+    mTerm = term;
     instances.add(this);
     mId = instances.size();
   }
 
-  public String getName() {
-    return mName;
+  public String getTerm() {
+    return mTerm;
   }
 
   public static List<Word> all() {

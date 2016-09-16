@@ -9,9 +9,9 @@ public class WordTest {
   }
 
   @Test
-  public void getName_returnsCorrectName_Java() {
+  public void getTerm_returnsCorrectTerm_Java() {
     Word testWord = new Word("Java");
-    assertEquals("Java", testWord.getName());
+    assertEquals("Java", testWord.getTerm());
   }
 
   @Test
