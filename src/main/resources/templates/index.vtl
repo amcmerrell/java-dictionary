@@ -1,12 +1,15 @@
-<h2>Personal Dictionary</h2>
+<h1>Personal Dictionary</h1>
 
 #if ($words.size() > 0)
   <p>Welcome to your personal dictionary. Click on one of the words below to view definitions or add a definition to that word.<p>
   <a href="/new"><button type="button" class="btn btn-primary">Add more words</button></a>
+  <h2>Current Entries:</h2>
   <div class="row">
     #foreach ($word in $words)
-      <div class="col-md-4">
+      <div class="col-md-3">
         <a href="/words/$word.getId()"><h3>$word.getTerm()</h3></a>
+      </div>
+      <div class="col-md-1">
       </div>
     #end
   </div>
