@@ -1,0 +1,15 @@
+<h2>Personal Dictionary</h2>
+
+#if ($words)
+  <p>Welcome to your personal dictionary. Click on one of the words below to view definitions or add a definition to that word.<p>
+  <ul>
+    #foreach ($word in $words)
+      <li>$word.getTerm()</li>
+    #end
+  </ul>
+  <a href="/new"><button type="button" class="btn btn-primary">Add more words</button></a>
+
+#else
+  <p>Welcome to your personal dictionary. You can add as many words as you would like to store, along definitions for each. Start by adding your first word!</p>
+  <a href="/new"><button type="button" class="btn btn-primary">Get Started</button></a>
+#end
