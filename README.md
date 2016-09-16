@@ -13,11 +13,11 @@ _This web application creates a dictionary that users can add words to, along wi
 * _Visit https://github.com/amcmerrell/java-dictionary to view files for this project._
 * _Open your terminal application of choice and use "git clone https://github.com/amcmerrell/java-dictionary" in the command line._
 * _Navigate into the java-dictionary folder you created and use "gradle run" in the command line._
-* _When that command gets to 75%, open a web browser and enter "localhost:4567."
+* _When that command gets to 75%, open a web browser and enter "localhost:4567."_
 
 ## Specifications
 _Homepage displays a list of words that display definitions, when clicked._
-* _Example Input: click on "Java"_
+* _Example Input: click on "Java"._
 * _Example Output: Java: a general-purpose computer programming language designed to produce programs that will run on any computer system._
 
 _Users are able to add their own words to the dictionary by submitting their word in a form._
