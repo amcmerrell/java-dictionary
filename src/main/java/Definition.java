@@ -4,10 +4,12 @@ import java.util.List;
 public class Definition {
   private String mDescription;
   private static List<Definition> instances= new ArrayList<Definition>();
+  private int mId;
 
   public Definition(String description) {
     mDescription = description;
     instances.add(this);
+    mId = instances.size();
   }
 
   public String getDescription() {
@@ -20,5 +22,13 @@ public class Definition {
 
   public static void clear() {
     instances.clear();
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static Definition find(int id) {
+    return instances.get(id - 1);
   }
 }
