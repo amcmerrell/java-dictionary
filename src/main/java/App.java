@@ -55,8 +55,8 @@ public class App {
       String description = request.queryParams("definition");
       Definition definition = new Definition(description);
       Word word = Word.find(Integer.parseInt(request.params(":id")));
-      //model.put("definitions", Word.getDe)
       model.put("word", word);
+      word.addDefinition(definition);
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
