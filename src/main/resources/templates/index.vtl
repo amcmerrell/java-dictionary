@@ -2,12 +2,14 @@
 
 #if ($words.size() > 0)
   <p>Welcome to your personal dictionary. Click on one of the words below to view definitions or add a definition to that word.<p>
-  <ul>
-    #foreach ($word in $words)
-      <li><a href="/words/$word.getId()">$word.getTerm()</a></li>
-    #end
-  </ul>
   <a href="/new"><button type="button" class="btn btn-primary">Add more words</button></a>
+  <div class="row">
+    #foreach ($word in $words)
+      <div class="col-md-4">
+        <a href="/words/$word.getId()"><h3>$word.getTerm()</h3></a>
+      </div>
+    #end
+  </div>
 
 #else
   <p>Welcome to your personal dictionary. You can add as many words as you would like to store, then add definitions for each. Start by adding your first word!</p>
