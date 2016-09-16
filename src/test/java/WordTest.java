@@ -13,4 +13,18 @@ public class WordTest {
     Word testWord = new Word("Java");
     assertEquals("Java", testWord.getName());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word wordOne = new Word("Java");
+    Word wordTwo = new Word("HTML");
+    assertTrue(Word.all().contains(wordOne));
+    assertTrue(Word.all().contains(wordTwo));
+  }
+
+  @Test
+  public void clear_emptiesAllInstancesOfWord_0() {
+    Word testWord = new Word("Java");
+    Word.clear();
+  }
 }
